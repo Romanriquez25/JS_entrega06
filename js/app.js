@@ -29,6 +29,7 @@ async function capturarMoneda() {
   }
 }
 
+mostrarMonedas();
 
 
 async function mostrarMonedas() {
@@ -41,11 +42,12 @@ async function mostrarMonedas() {
   });
 }
 
-mostrarMonedas();
 
 
 // Declarar myChart fuera de la función calcular
 let myChart;
+
+
 
 async function calcular() {
   // Elimina la gráfica anterior si existe
