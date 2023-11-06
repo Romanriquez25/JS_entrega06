@@ -1,4 +1,4 @@
-let url                 = "https:mindicador.cl/api";
+let url                 = "https://mindicador.cl/api";
 let moneda__option      = document.querySelector("#moneda__option");
 let cantidadAcalcular   = document.getElementById("txtCantidad");
 let btnCalcular         = document.querySelector("#btnCalcular");
@@ -23,18 +23,19 @@ async function capturarMoneda() {
   
     let monedap = monedasObj.filter((e) => e.codigo != undefined);
     return monedap;
-
+    
   } catch (error) {
     alert("¡Algo salió mal!");
   }
+
 }
 
 mostrarMonedas();
 
 
 async function mostrarMonedas() {
-  const monedita = await capturarMoneda();
-  monedita.forEach((moneda) => {
+  const monedas = await capturarMoneda();
+  monedas.forEach((moneda) => {
     const option = document.createElement("option");
     option.value = moneda.valor;
     option.textContent = `${moneda.nombre}`;
