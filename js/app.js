@@ -33,8 +33,8 @@ mostrarMonedas();
 
 
 async function mostrarMonedas() {
-  const monedas = await capturarMoneda();
-  monedas.forEach((moneda) => {
+  const monedita = await capturarMoneda();
+  monedita.forEach((moneda) => {
     const option = document.createElement("option");
     option.value = moneda.valor;
     option.textContent = `${moneda.nombre}`;
