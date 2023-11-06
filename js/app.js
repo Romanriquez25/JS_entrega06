@@ -91,6 +91,8 @@ async function calcular() {
   const ejeX = historico10.map((e) => e.fecha);
 
   const formattedDates = ejeX.map((fecha) => dayjs(fecha).format('YYYY-MM-DD'));
+  
+  formattedDates.reverse();
 
   const data = {
     labels: formattedDates, 
